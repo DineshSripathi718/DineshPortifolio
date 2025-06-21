@@ -1,0 +1,44 @@
+@media (min-width:0px) and (max-width:767px){
+    .header-section{
+        height: 200svh;
+    }
+
+    .header-section nav,
+    .header-section .container{
+        min-width: 300px;
+    }
+
+    .header-section .container{
+        flex : 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap : 30px;
+        padding : 0px;
+        color : white;
+        text-align: center;
+    }
+
+    .header-section .container .name{
+        font-size: 35px;
+    }
+    .header-section .container .social-media{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap : 20px;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .header-section .container .description{
+        font-size: 20px;
+        text-align: center;
+        width: 70%;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 1023px){
+    
+}

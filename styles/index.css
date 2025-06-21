@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* css variables */
+:root{
+    --Orbitron : "Orbitron", sans-serif;
+    --Roboto : "Roboto", sans-serif;
+    --background-gradient : linear-gradient(-45deg, #ff6b6b, #f8e71c, #7ed6df, #70a1ff);
+    --primary-color : rgb(5, 5, 56);
+    --primary-text-color : white;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: none;
+    justify-content: space-around;
+    background-color: transparent;
+    position: fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.611);
+    animation: slide-down .5s linear;
+}
+
+@keyframes slide-down {
+    from{
+        transform: translateY(-100px);
+    }
+}
+
+header nav{
+    width: 100%;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header a{
+    text-decoration: none;
+    color : rgb(255, 255, 255);
+    font-size: 20px;
+    transition: text-shadow .5s linear;
+}
+
+header a:hover{
+    text-shadow: 0px 0px 20px white,
+                 0px 0px 15px rgb(125, 125, 125),
+                 0px 0px 20px white;
+}
+
+body{
+    padding: 0px;
+    margin : 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--Roboto);
+}
+
+.header-section{
+    height: 100svh;
+    font-family: var(--Roboto);
+    background: url('../assets/cover-image.jpeg');
+    background-size: cover;
+    background-position: center 60%;
+}
+
+.header-section nav{
+    font-size: 30px;
+    flex : 1;
+}
+
+.header-section ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap : 20px;
+}
+
+.header-section .containers{
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.header-section li{
+    border-bottom: 3px solid rgb(217, 217, 217);
+    width: 50%;
+}
+
+.header-section a{
+    text-decoration: none;
+    color : rgb(255, 255, 255);
+    padding : 10px;
+}
+
+.header-section .container{
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap : 30px;
+    padding : 20px;
+    color : white;
+}
+
+.header-section .container .name{
+    font-size: 60px;
+    font-weight: 700;
+    font-family: var(--Orbitron);
+}
+
+.header-section .container .social-media{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap : 20px;
+    align-items: center;
+    font-size: 30px;
+}
+
+.header-section .container .description{
+    font-size: 25px;
+    text-shadow: 0px 0px 15px black;
+}
+
+.services{
+    padding : 4% 0px;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 3%;
+}
+
+
+
+.services .containers{
+    padding : 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap : 20px;
+    flex-wrap: wrap;
+}
+
+.services img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.services .container{
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+    align-items: center;
+}
+
+.services .cta{
+    margin-top: 10px;
+}
+
+.services .cta a{
+    text-transform: capitalize;
+    padding : 10px;
+    border : 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color : black;
+    text-decoration: none;
+    transition: all .5s linear;
+}
+
+.services .cta a:hover{
+    background-color: black;
+    color : white;
+}
+
+.services .description{
+    font-size: 17px;
+}
+
+.skills,
+.education,
+.experience{
+    padding : 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap : 20px;
+    flex-wrap: wrap;
+}
+
+.skills > .title,
+.education > .title,
+.experience > .title{
+    font-family: var(--Orbitron);
+    font-size: 35px;
+    flex : 1;
+    padding : 10px;
+    font-weight: 500;
+}
+
+.skills .containers,
+.education .containers,
+.experience .containers{
+    padding : 10px;
+    flex : 3;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.experience,
+.education{
+    padding : 3% 0px;
+}
+
+.experience .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap : 20px;
+    padding : 30px;
+    padding-top : 0px;
+    border-bottom: 1px solid black;
+}
+
+.experience .container .exp-title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap : 20px;
+    align-items: start;
+}
+
+.experience .year,
+.experience .job{
+    min-width: 200px;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+
+.experience .year{
+    font-style: italic;
+    font-size: 18px;
+    flex : 1;
+}
+
+.experience .exp-title-container{
+    flex : 4;
+}
+
+.experience .company-name{
+    font-size: 18px;
+    font-weight: 600;
+    color : rgb(87, 87, 87);
+}
+
+.experience .job{
+    font-weight: 800;
+}
+
+.experience .description{
+    font-size: 19px;
+}
+
+.education{
+    background-color: rgb(235, 235, 235);
+}
+
+.education .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap : 10px;
+    padding : 30px;
+}
+
+.education .course-name{
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.education .college-name{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    color : rgb(86, 85, 85);
+}
+
+.education .year{
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.education .achievements ul{
+    margin: 0px;
+    padding : 0px;
+    list-style: none;
+    font-style: 19px;
+}
+
+.education .course-details{
+    display: flex;
+    flex-direction: column;
+    gap : 5px;
+}
+
+.education .container{
+    padding : 30px;
+    padding-top : 0px;
+    border-bottom: 1px solid black;
+}
+
+.experience .no-border,
+.education .no-border{
+    border-bottom: 0px;
+}
+
+.skills{
+    width: 100%  ;
+    padding : 0px;
+}
+.skills .title{
+    padding : 30px;
+}
+
+.skills .containers{
+    padding : 20px;
+    background-color: grey;
+    color : white;
+}
+
+.skills .container .title{
+    font-size: 30px;
+    padding : 6px;
+}
+
+.skills ul{
+    list-style: none;
+    padding : 10px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap : 10px;
+}
+
+.skills ul li{
+    font-size: 20px;
+    background-color: black;
+    padding : 10px;
+    border-radius: 10px;
+    min-width: 30px;
+    cursor: pointer;
+}
+
+.testimonials{
+    background: url('../assets/client.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.testimonials .test-containers{
+    color : rgb(221, 219, 219);
+    padding : 3% 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.358);
+}
+
+.testimonials .title{
+    font-size: 35px;
+    font-weight: 800;
+    padding : 10px;
+}
+
+.testimonials .containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 30px;
+}
+
+.testimonials .container{
+    width: 70%;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap : 20px;
+    flex-wrap: wrap;
+}
+
+.testimonials img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.testimonials .image-container{
+    flex : 1;
+    min-width: 100px;
+    max-width: 150px;
+    height: 150px;
+    border : 2px solid black;
+}
+
+.testimonials .feedback-container{
+    min-width: 200px;
+    flex :1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 10px;
+}
+
+.testimonials .feedback{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.testimonials .name{
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.testimonials .view-more{
+    background: transparent;
+    padding : 10px 20px;
+    border : 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    color : white;
+    font-weight: 600;
+}
+
+.sample-work{
+    width: 100%;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 30px;
+    padding : 3% 0px;
+}
+
+.sample-work > .title{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.sample-work .image-container{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.sample-work img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    cursor: pointer;
+}
+
+.sample-work .containers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap : 30px;
+    flex-wrap: wrap;
+}
+
+.sample-work .container{
+    min-width: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 20px;
+}
+
+.sample-work a{
+    padding : 10px;
+    border-radius: 5px;
+    border : 1px solid rgb(0, 0, 0);
+    text-transform: capitalize;
+    color : black;
+    text-decoration: none;
+}
+
+.sample-work .containers .title{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.services button,
+.sample-work button{
+    padding : 10px 20px;
+    background: transparent;
+    border : 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-in-touch{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 20px;
+    padding : 3% 0px;
+}
+
+.get-in-touch > .title{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: start;
+    font-family: var(--Orbitron);
+    width: 70%;
+}
+
+.get-in-touch .containers{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 30px;
+    flex-wrap: wrap;
+}
+
+.get-in-touch .image-container{
+    min-width: 200px;
+    max-width: 400px;
+    flex: 1;
+}
+
+.get-in-touch .container{
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap : 30px;
+}
+
+.get-in-touch img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.get-in-touch .details-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap : 10px;
+}
+
+.get-in-touch .container .title{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.get-in-touch .description{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.get-in-touch a{
+    text-decoration: none;
+    color : inherit;
+}
+
+.sample-work > .title,
+.testimonials .test-containers > .title,
+.services > .title{
+    padding : 10px;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    font-family: var(--Orbitron);
+}
+
+.sample-work > .title::after,
+.sample-work > .title::before,
+.testimonials .test-containers > .title::before,
+.testimonials .test-containers > .title::after,
+.services > .title::before,
+.services > .title:after{
+    content: " ";
+    width: 100px;
+    height: 4px;
+    background-color: rgb(255, 6, 6);
+    position: absolute;
+    bottom : 0;
+    right : 0;
+}
+
+.sample-work > .title::before,
+.testimonials .test-containers > .title::before,
+.services > .title::before{
+    top : 0;
+    left : 0;
+}
+
+.whatsapp{
+    background-color: green;
+    position: fixed;
+    bottom : 30px;
+    left : 30px;
+    font-size: 60px;
+    padding : 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp a{
+    color : white;
+}
+
+.email{
+    position: fixed;
+    right: 0;
+    top : 30%;
+    transform: rotate(270deg) translateY(25px);
+    background-color: rgb(213, 11, 11);
+    color : white;
+    padding : 10px;
+}
+
+.email a{
+    text-decoration: none;
+    color : inherit;
+}
+
+header .download-resume a{
+    background-color: white;
+    padding : 5px;
+    border-radius: 10px;
+    color : black;
+    border : 1px solid transparent;
+    transition: all .5s linear;
+}
+
+header .download-resume a:hover{
+    border : 1px solid white;
+    background-color: transparent;
+    color : white;
+}
