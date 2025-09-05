@@ -655,6 +655,7 @@ body{
     color : white;
 }
 
+.github,
 .email{
     position: fixed;
     right: 0;
@@ -665,11 +666,21 @@ body{
     padding : 10px;
 }
 
+.github a,
 .email a{
     text-decoration: none;
     color : inherit;
 }
 
+.github{
+    top : 45%;
+    right: 10px;
+    background-color: black;
+    padding : 10px;
+}
+.github a{
+    color : white;
+}
 header .download-resume a{
     background-color: white;
     padding : 5px;
