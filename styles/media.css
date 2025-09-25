@@ -37,6 +37,11 @@
         text-align: center;
         width: 70%;
     }
+
+    .testimonials{
+        background-size: 270%;
+        background-position: center;
+    }
 }
 
 @media (min-width : 768px) and (max-width : 1023px){

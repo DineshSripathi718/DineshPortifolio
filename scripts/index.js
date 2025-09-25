@@ -25,3 +25,18 @@ document.addEventListener('scroll', () => {
 
     prevScrollValue = newScrollValue;
 });
+
+
+// Skills animation on scroll
+const skillContainers = document.querySelectorAll('.skills .container');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+skillContainers.forEach(container => observer.observe(container));

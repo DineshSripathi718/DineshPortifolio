@@ -65,7 +65,8 @@ body{
 }
 
 .header-section{
-    height: 100svh;
+    min-height: 100svh;
+    height: fit-content;
     font-family: var(--Roboto);
     background: url('../assets/cover-image.jpeg');
     background-size: cover;
@@ -380,6 +381,7 @@ body{
     background: url('../assets/client.jpg');
     background-size: 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .testimonials .test-containers{
@@ -480,7 +482,6 @@ body{
 .sample-work .image-container{
     width: 150px;
     height: 150px;
-    border-radius: 50%;
 }
 
 .sample-work img{
@@ -694,4 +695,129 @@ header .download-resume a:hover{
     border : 1px solid white;
     background-color: transparent;
     color : white;
+}
+
+
+/* Sample Works Cards - Refined Styles & Animations */
+.sample-work .container {
+    min-width: 250px;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+/* Staggered Animation using CSS variable --i */
+.sample-work .container {
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effect */
+.sample-work .container:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Image Styling */
+.sample-work .image-container {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.sample-work .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sample-work .container:hover .image-container img {
+    transform: scale(1.1);
+}
+
+/* Title & Description */
+.sample-work .container .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.sample-work .container .description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button / Link Styling */
+.sample-work .container a {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #007BFF;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.sample-work .container a:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Skills Section */
+
+
+.skills .container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+/* Staggered animation for skill lists */
+.skills .container ul li {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.skills .container.visible ul li {
+    animation: fadeInUpItem 0.5s forwards;
+}
+
+.skills .container.visible ul li:nth-child(1) { animation-delay: 0.1s; }
+.skills .container.visible ul li:nth-child(2) { animation-delay: 0.2s; }
+.skills .container.visible ul li:nth-child(3) { animation-delay: 0.3s; }
+.skills .container.visible ul li:nth-child(4) { animation-delay: 0.4s; }
+.skills .container.visible ul li:nth-child(5) { animation-delay: 0.5s; }
+.skills .container.visible ul li:nth-child(6) { animation-delay: 0.6s; }
+.skills .container.visible ul li:nth-child(7) { animation-delay: 0.7s; }
+.skills .container.visible ul li:nth-child(8) { animation-delay: 0.8s; }
+.skills .container.visible ul li:nth-child(9) { animation-delay: 0.9s; }
+.skills .container.visible ul li:nth-child(10) { animation-delay: 1s; }
+
+/* Animations */
+@keyframes fadeInUpItem {
+    to { opacity: 1; transform: translateY(0); }
 }
